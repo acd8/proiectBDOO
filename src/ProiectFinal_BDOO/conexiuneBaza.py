@@ -1,5 +1,6 @@
 import MySQLdb
 stare=""
+stareConexiune=""
 def CreeazaConexiune(host,user,parola,bazadate):
 
  try:
@@ -12,5 +13,7 @@ def CreeazaConexiune(host,user,parola,bazadate):
      print "Status baza de date: Deconectat!"
      stare="deconectat"
      print "Eroare la conexiunea cu baza de date! - ", e
+
+
 
 
