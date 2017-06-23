@@ -4,7 +4,7 @@ import MySQLdb
 
 def cautadestinatii(bazaDate):
     cautare_destinatii = raw_input("Cautare destinatii")
-    sql="Select oras_aterizare from sejur where oras_plecare='+cautare_destinatii+'"
+    sql=('Select oras_aterizare from sejur where oras_plecare="%s"' % (cautare_destinatii))
     try:
         cursor = bazaDate.cursor()
         try:
