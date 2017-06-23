@@ -22,8 +22,9 @@ def meniu():
     print "|  2.Creare cont                                                       |"
     print "|  3.Cautare destinatii                                                |"
     print "|  4.Lista destinatii                                                  |"
-    print "|  5.Afisare Avioane                                                |"
+    print "|  5.Afisare Avioane                                                   |"
     print "|  6.Iesire din aplicatie                                              |"
+    print "|  7.GITHUB                                                            |"
     print "|______________________________________________________________________|"
     optiune = raw_input("====: ")
     return optiune
