@@ -4,6 +4,7 @@ import autentificareUser
 import listaDestinatii
 import adaugarePasager
 import listaAvioane
+import cautareDestinatie
 
 host="localhost"
 user="root"
@@ -37,7 +38,7 @@ while(optiune!="7"):
     elif(opt=="2"):
         adaugarePasager.crearecont(db)
     elif (opt == "3"):
-        text()
+        cautareDestinatie.cautadestinatii(db)
     elif(opt=="4"):
         listaDestinatii.afisareDestinatii(db)
     elif(opt=="5"):
