@@ -42,11 +42,7 @@ while(optiune!="7"):
     elif(opt=="2"):
         adaugarePasager.crearecont(db)
     elif (opt == "3"):
-<<<<<<< HEAD
         cautareDestinatie.cautadestinatii(db)
-=======
-        print "optiunea 3 test()"
->>>>>>> 6350b87996ce450bfcf55c0465185bef9dc69126
     elif(opt=="4"):
         listaDestinatii.afisareDestinatii(db)
     elif(opt=="5"):
