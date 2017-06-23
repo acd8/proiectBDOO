@@ -3,7 +3,7 @@ import conexiuneBaza
 import MySQLdb
 
 def cautadestinatii(bazaDate):
-    cautare_destinatii = raw_input("Cautare destinatii")
+    cautare_destinatii = raw_input("Cautare destinatii:")
     sql=('Select oras_aterizare from sejur where oras_plecare="%s"' % (cautare_destinatii))
     try:
         cursor = bazaDate.cursor()
