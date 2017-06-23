@@ -1,7 +1,7 @@
 import os
 import conexiuneBaza
 import MySQLdb
-
+import sesiuneAutentificat
 def verificareAutentificare(bazaDate):
     username=raw_input("Numele de uilizator:")
     parola=raw_input("Parola:")
@@ -18,14 +18,18 @@ def verificareAutentificare(bazaDate):
                 parolaTemp=row[1]
             if(usernameTemp==username and parolaTemp==parola):
                 verificat="verificat"
+                sesiuneAutentificat.incepeSesiune(username);
             else:
                 verificat="neverificat"
+                print("Numele de utilizator sau parola sunt gresite!");
+                returnare = raw_input("Apasati o tasta pentru a iesi din program!");
         else:
             print("Numele de utilizator sau parola sunt gresite!");
             returnare=raw_input("Apasati 0 pentru a iesi din program. Pentru a incerca din nou apasati tasta 1")
 
         print verificat
     except Exception, e:
-        print "Eroare interogatie la baza de date ->", e
+        print("Numele de utilizator sau parola sunt gresite!");
+        returnare = raw_input("Apasati o tasta pentru a iesi din program!");
     bazaDate.commit()
     cursor.close()
