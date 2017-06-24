@@ -1,6 +1,9 @@
 import MySQLdb
 stare=""
-stareConexiune=""
+host="localhost"
+user="root"
+password=""
+bazaDate="aeroport"
 def CreeazaConexiune(host,user,parola,bazadate):
 
  try:
